@@ -2,7 +2,6 @@
 Serializers for recipe APIs
 """
 from rest_framework import serializers
-
 from core.models import (
     Recipe,
     Tag,
@@ -103,4 +102,4 @@ class RecipeImageSerializer(serializers.ModelSerializer):
         fields = ['id', 'image']
         read_only_fields = ['id']
         extra_kwargs = {'image': {'required': 'True'}}
-        
+
