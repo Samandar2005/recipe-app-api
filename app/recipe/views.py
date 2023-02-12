@@ -113,8 +113,6 @@ class BaseRecipeAttrViewSet(mixins.DestroyModelMixin,
                             mixins.ListModelMixin,
                             viewsets.GenericViewSet):
     """Base viewset for recipe attributes."""
-    serializer_class = serializers.TagSerializer
-    queryset = Tag.objects.all()
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
